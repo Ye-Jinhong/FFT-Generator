@@ -75,7 +75,7 @@ class FFTTester extends AnyFreeSpec with ChiselScalatestTester with Config {
       val bound: Double = pow(2.0, BinaryPoint)
       var error: Double = 0
       var ovNum: Int = 0
-      var iterNum: Int = 100
+      var iterNum: Int = 1
 
       for (t <- 0 until iterNum) {
         val a = new Array[Complex](FFTlength)

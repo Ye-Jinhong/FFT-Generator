@@ -57,7 +57,7 @@ class FFT extends Module with Config{
     val wnCtrl = if(i < FFTparallel) {
       cnt(i)
     } else {
-      cnt(FFTparallel)((log2Ceil(radix) * (FFTstage - i - 1) - 1),0)
+      cnt(FFTparallel)(log2Ceil(radix) * (FFTstage - i - 1) - 1, 0)
     }
     val startlist = (0 until FFTparallel_r).map(x => ((x % ceil(pow(radix, (FFTparallel - i)).toInt)) * datalength).toInt)
     for(x <- 0 until FFTparallel_r) {

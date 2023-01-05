@@ -11,8 +11,8 @@ trait Config {
 // config of construct
 // support all parallel data (datalength = 1)
 // FFTstage - FFTparallel must > 0
-  val radix = 8  //radix of the FFT,supprot 2, 4, 8
-  val FFTstage = 2 // FFT stages
+  val radix = 2  //radix of the FFT,supprot 2, 4, 8
+  val FFTstage = 6 // FFT stages
   val FFTparallel = 0 // the really parallel is radix ^ FFTparallel
   val useGauss = false // whether use gauss multiplier
   val do_reorder = false // true: output is one bit serial and all in order
